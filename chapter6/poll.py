@@ -13,7 +13,7 @@ for employee, response in employee_response.items():
     print(f"{employee}'s answer was {response}")
 
 for employee in employee_list:
-    if employee not in employee_response.keys():
+    if employee_response.get(employee) is None:
         pending_poll.append(employee)
 
 for employee in pending_poll:
